@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Unleashed</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="app">
+        <h1 class="text">Google Unleashed</h1>
+        <div>
+            <select id="filter-select">
+                <option value="0">Select Filter</option>
+                <option value="1">intitle</option>
+                <option value="2">allintitle</option>
+                <option value="3">intext</option>
+                <option value="4">allintext</option>
+                <option value="5">inurl</option>
+                <option value="6">allinurl</option>
+                <option value="7">site</option>
+                <option value="8">numrange</option>
+                <option value="9">inext</option>
+                <option value="10">inanchor</option>
+                <option value="11">allinanchor</option>
+                <option value="12">related</option>
+                <option value="13">cache</option>
+            </select>
+            <button id="add-filter" disabled>Add Filter</button>
+        </div>
+        <div id="filter-view"></div>
+        <div id="filters"></div>
+        <div>
+            <button id="go-button" disabled>Search</button>
+            <button id="rate-us">Rate Us</button>
+        </div>
+        <div id="searchHistoryListContainer">
+            <ul id="searchHistoryList"></ul>
+            <button id="clearAllButton">Clear All</button>
+            <button id="exportButton">Export to CSV</button>
+        </div>
+        <div id="filter-count">0</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

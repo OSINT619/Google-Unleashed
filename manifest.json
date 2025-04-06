@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Google Unleashed",
+  "version": "1.0",
+  "description": "A Google search extension with advanced search capabilities",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "img/16.png",
+      "48": "img/48.png",
+      "128": "img/128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["img/cancel.svg", "popup.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
